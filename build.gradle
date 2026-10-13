@@ -1,0 +1,20 @@
+plugins {
+    id 'fabric-loom' version '0.6-SNAPSHOT'
+    id 'maven-publish'
+}
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
+archivesBaseName = "sodium"
+version = "0.2.0"
+group = "me.jellysquid.mods.sodium"
+dependencies {
+    minecraft "com.mojang:minecraft:1.16.5"
+    mappings "net.fabricmc:yarn:1.16.5+build.10:v2"
+    modImplementation "net.fabricmc:fabric-loader:0.11.3"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:0.38.1+1.16"
+}
+processResources {
+    inputs.property "version", project.version
+    filteringCharset = 'UTF-8'
+    filesMatching("fabric.mod.json") { expand "version": project.version }
+}
