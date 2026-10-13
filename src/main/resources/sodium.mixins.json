@@ -1,0 +1,7 @@
+{
+  "required": true,
+  "package": "me.jellysquid.mods.sodium.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [ "ClientPlayNetworkHandlerMixin" ],
+  "injectors": { "defaultRequire": 1 }
+}
